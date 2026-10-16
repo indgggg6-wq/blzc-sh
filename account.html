@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>我的账号与积分｜碧萝找厂</title>
+<meta name="description" content="查看积分余额与解锁记录。">
+<meta name="robots" content="noindex, nofollow"><!-- 演示阶段禁止收录；正式上线（替换真实业主信息后）把 config.json 的 noindex 改为 false -->
+<meta name="theme-color" content="#0a7010">
+<meta property="og:title" content="我的账号与积分｜碧萝找厂">
+<meta property="og:description" content="查看积分余额与解锁记录。">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/brand/favicon-256.png">
+<link rel="apple-touch-icon" href="assets/brand/favicon-256.png">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>window.BLZC_CONFIG={pointsPerUnlock:10,signupPoints:30,regionName:"上海·嘉定"};</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body data-page="account" data-base="">
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="index.html" aria-label="碧萝找厂 首页">
+      <img class="brand__logo" src="assets/brand/logo-word.webp"
+           srcset="assets/brand/logo-word.webp 480w, assets/brand/logo-word@2x.webp 958w"
+           sizes="150px" alt="碧萝找厂" width="150" height="31" decoding="async">
+      <span class="brand__region">上海·嘉定</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav__link" href="index.html">房源列表</a>
+      <a class="nav__link" href="about.html">平台说明</a>
+      <a class="nav__link" href="contact.html">联系客服</a>
+    </nav>
+    <div class="header__side">
+      <a class="points-chip" data-points-chip hidden href="account.html">积分 <b class="num">0</b></a>
+      <a class="nav__link" href="login.html" data-auth-entry>登录 / 注册</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="移动导航">
+  <div class="mnav__list">
+    <a class="mnav__link" href="index.html">房源列表</a>
+    <a class="mnav__link" href="about.html">平台说明</a>
+    <a class="mnav__link" href="contact.html">联系客服</a>
+    <a class="mnav__link" href="account.html" data-mnav-account>登录 / 注册</a>
+  </div>
+  <div class="mnav__foot">
+    <a class="btn btn--primary btn--block" href="tel:13800000000"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 客服 138 0000 0000</a>
+    <p style="font-size:var(--fs-2xs);color:var(--faint);text-align:center">9:00–21:00</p>
+  </div>
+</nav>
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="page-head__crumbs" aria-label="面包屑"><a href="index.html">房源列表</a><span class="sep">/</span><span>我的账号与积分</span></nav>
+      <h1 class="page-head__title">我的账号与积分</h1>
+      <p class="page-head__lead">解锁业主联系方式会消耗积分；同一房源只扣一次，解锁后可随时回看。</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div data-requires-login hidden>
+        <div class="empty-state">
+          <p style="font-size:1.05rem;color:var(--ink)">请先登录后查看</p>
+          <p style="margin-top:8px">登录后可查看积分余额、解锁记录与已解锁房源的业主联系方式。</p>
+          <div style="margin-top:18px"><a class="btn btn--primary btn--lg" href="login.html">前往登录 / 注册</a></div>
+        </div>
+      </div>
+
+      <div data-account hidden>
+        <div class="points-hero" style="margin-bottom:26px">
+          <div class="points-hero__main">
+            <p class="points-hero__v"><span data-points-value>0</span></p>
+            <p class="points-hero__k">当前可用积分</p>
+            <p class="points-hero__k" data-user-name style="color:var(--faint)"></p>
+          </div>
+          <div class="points-hero__side">
+            <div class="points-hero__row"><span>解锁一套房源消耗</span><span><b data-points-cost>10</b> 积分</span></div>
+            <div class="points-hero__row"><span>注册赠送</span><span><b data-points-gift>30</b> 积分</span></div>
+            <div class="points-hero__row"><span>已解锁房源</span><span><b data-unlock-count>0</b> 套</span></div>
+            <p class="form-row__hint" style="margin-top:4px">积分不足时，可联系客服 138 0000 0000（9:00–21:00）获取。</p>
+            <div class="form-actions">
+              <a class="btn btn--primary btn--sm" href="index.html">去挑房源</a>
+              <button class="btn btn--sm" type="button" data-logout>退出登录</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-head sec-head--split sec-head--rule">
+          <h2 class="sec-head__title">已解锁房源</h2>
+          <span style="font-size:var(--fs-sm);color:var(--mute)">解锁后永久可见，可直接拨打业主电话</span>
+        </div>
+        <table class="data-table" style="margin-bottom:26px">
+          <thead>
+            <tr><th>房源标题</th><th>区域与面积</th><th>业主联系方式</th><th>解锁日期</th><th>操作</th></tr>
+          </thead>
+          <tbody data-unlock-rows></tbody>
+        </table>
+        <div class="empty-state" data-unlock-empty hidden>
+          <p style="color:var(--ink)">还没有解锁任何房源</p>
+          <p style="margin-top:8px">在房源详情页消耗 10 积分即可解锁业主联系方式。</p>
+          <div style="margin-top:16px"><a class="btn btn--primary" href="index.html">去挑房源</a></div>
+        </div>
+
+        <div class="sec-head sec-head--rule" style="margin-top:34px">
+          <h2 class="sec-head__title">积分明细</h2>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>时间</th><th>说明</th><th>变动</th><th>余额</th></tr>
+          </thead>
+          <tbody data-points-rows></tbody>
+        </table>
+        <div class="empty-state" data-points-empty hidden style="margin-top:14px">
+          <p style="color:var(--ink)">暂无积分记录</p>
+        </div>
+
+        <p class="notice" style="margin-top:20px">演示版本：账号、积分与解锁记录保存在本机浏览器，用于展示完整流程。正式版本由服务端存储，业主联系方式将在验证解锁后由服务端返回。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__top">
+    <div>
+      <img class="footer__logo" src="assets/brand/logo-word.webp" alt="碧萝找厂" width="150" height="31" loading="lazy" decoding="async">
+      <p class="footer__desc">上海·嘉定厂房、仓库租赁信息平台。房源均由业主本人（一房东）提供并核实产权，用户注册后可消耗积分解锁业主联系方式，直接与业主沟通。</p>
+    </div>
+    <div>
+      <p class="footer__h">网站导航</p>
+      <div class="footer__list">
+        <a href="index.html">房源列表（17 套）</a>
+        <a href="about.html">平台说明</a>
+        <a href="account.html">我的账号与积分</a>
+        <a href="contact.html">联系客服</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__h">客服与规则</p>
+      <div class="footer__list">
+        <a href="tel:13800000000">客服电话：138 0000 0000</a>
+        <span style="color:var(--mute)">微信号：biluozhaochang</span>
+        <span style="color:var(--mute)">注册赠送 30 积分 · 解锁一套消耗 10 积分</span>
+        <span style="color:var(--mute)">服务时间：9:00–21:00</span>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <div>© 2026 碧萝找厂 · 上海·嘉定 · 沪ICP备XXXXXXXX号（占位）</div>
+    <div>演示版本：业主联系方式为占位内容，正式上线前替换为经核实的真实信息。</div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/account.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>登录 / 注册｜碧萝找厂 上海·嘉定</title>
+<meta name="description" content="注册 碧萝找厂 账号，赠送 30 积分，可解锁业主联系方式，直接与业主沟通。">
+<meta name="robots" content="noindex, nofollow"><!-- 演示阶段禁止收录；正式上线（替换真实业主信息后）把 config.json 的 noindex 改为 false -->
+<meta name="theme-color" content="#0a7010">
+<meta property="og:title" content="登录 / 注册｜碧萝找厂 上海·嘉定">
+<meta property="og:description" content="注册 碧萝找厂 账号，赠送 30 积分，可解锁业主联系方式，直接与业主沟通。">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/brand/favicon-256.png">
+<link rel="apple-touch-icon" href="assets/brand/favicon-256.png">
+<link rel="stylesheet" href="assets/css/main.css">
+<script>window.BLZC_CONFIG={pointsPerUnlock:10,signupPoints:30,regionName:"上海·嘉定"};</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body data-page="account" data-base="">
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="index.html" aria-label="碧萝找厂 首页">
+      <img class="brand__logo" src="assets/brand/logo-word.webp"
+           srcset="assets/brand/logo-word.webp 480w, assets/brand/logo-word@2x.webp 958w"
+           sizes="150px" alt="碧萝找厂" width="150" height="31" decoding="async">
+      <span class="brand__region">上海·嘉定</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a class="nav__link" href="index.html">房源列表</a>
+      <a class="nav__link" href="about.html">平台说明</a>
+      <a class="nav__link" href="contact.html">联系客服</a>
+    </nav>
+    <div class="header__side">
+      <a class="points-chip" data-points-chip hidden href="account.html">积分 <b class="num">0</b></a>
+      <a class="nav__link" href="login.html" data-auth-entry>登录 / 注册</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="移动导航">
+  <div class="mnav__list">
+    <a class="mnav__link" href="index.html">房源列表</a>
+    <a class="mnav__link" href="about.html">平台说明</a>
+    <a class="mnav__link" href="contact.html">联系客服</a>
+    <a class="mnav__link" href="account.html" data-mnav-account>登录 / 注册</a>
+  </div>
+  <div class="mnav__foot">
+    <a class="btn btn--primary btn--block" href="tel:13800000000"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 客服 138 0000 0000</a>
+    <p style="font-size:var(--fs-2xs);color:var(--faint);text-align:center">9:00–21:00</p>
+  </div>
+</nav>
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="page-head__crumbs" aria-label="面包屑"><a href="index.html">房源列表</a><span class="sep">/</span><span>登录 / 注册</span></nav>
+      <h1 class="page-head__title">登录 / 注册</h1>
+      <p class="page-head__lead">注册即赠 30 积分，可解锁 3 套房源的业主联系方式。</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap auth-wrap">
+      <div class="auth-card">
+        <div class="auth-tabs" role="tablist">
+          <button class="auth-tab" type="button" role="tab" id="tab-login" aria-selected="true" aria-controls="panel-login">登录</button>
+          <button class="auth-tab" type="button" role="tab" id="tab-register" aria-selected="false" aria-controls="panel-register">注册</button>
+        </div>
+
+        <div class="auth-panel" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+          <form class="form" data-login-form novalidate>
+            <div class="form-row">
+              <label class="form-row__label" for="login-phone">手机号<span class="req">*</span></label>
+              <input class="input" id="login-phone" name="phone" type="tel" inputmode="numeric" placeholder="请输入 11 位手机号" autocomplete="tel">
+            </div>
+            <div class="form-row">
+              <label class="form-row__label" for="login-code">短信验证码<span class="req">*</span></label>
+              <div class="auth-code">
+                <input class="input" id="login-code" name="code" type="text" inputmode="numeric" placeholder="6 位验证码" autocomplete="one-time-code">
+                <button class="btn" type="button" data-send-code>获取验证码</button>
+              </div>
+              <p class="form-row__hint">演示环境未接入短信服务，验证码可随意填写 4–6 位数字。</p>
+            </div>
+            <p class="form-msg" data-form-msg role="status" aria-live="polite"></p>
+            <div class="form-actions">
+              <button class="btn btn--primary btn--lg" type="submit">登录</button>
+              <a class="btn btn--ghost" href="index.html">返回房源列表</a>
+            </div>
+          </form>
+          <div class="auth-alt">
+            <span>未注册的手机号将自动创建账号并赠送 30 积分</span>
+          </div>
+        </div>
+
+        <div class="auth-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register" hidden>
+          <form class="form" data-register-form novalidate>
+            <div class="form-row">
+              <label class="form-row__label" for="reg-name">称呼<span class="req">*</span></label>
+              <input class="input" id="reg-name" name="name" type="text" placeholder="例如：张先生 / 李经理" maxlength="20">
+            </div>
+            <div class="form-row">
+              <label class="form-row__label" for="reg-phone">手机号<span class="req">*</span></label>
+              <input class="input" id="reg-phone" name="phone" type="tel" inputmode="numeric" placeholder="请输入 11 位手机号" autocomplete="tel">
+            </div>
+            <div class="form-row">
+              <label class="form-row__label" for="reg-code">短信验证码<span class="req">*</span></label>
+              <div class="auth-code">
+                <input class="input" id="reg-code" name="code" type="text" inputmode="numeric" placeholder="6 位验证码">
+                <button class="btn" type="button" data-send-code>获取验证码</button>
+              </div>
+              <p class="form-row__hint">演示环境未接入短信服务，验证码可随意填写 4–6 位数字。</p>
+            </div>
+            <label class="check" style="font-size:var(--fs-sm)">
+              <input type="checkbox" name="agree">
+              <span>已阅读并同意《用户服务协议》与《隐私政策》，并将合理使用业主联系方式</span>
+            </label>
+            <p class="form-msg" data-form-msg role="status" aria-live="polite"></p>
+            <div class="form-actions">
+              <button class="btn btn--primary btn--lg" type="submit">注册并领取积分</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="block__h" style="margin-top:0">账号可用功能</h2>
+        <div class="auth-benefits">
+          <div class="auth-benefit">
+            <span class="auth-benefit__n" aria-hidden="true">01</span>
+            <div>
+              <p class="auth-benefit__t">解锁业主联系方式</p>
+              <p class="auth-benefit__d">消耗 10 积分解锁一套房源的业主电话与微信，解锁后永久可见，同一房源不重复扣分。</p>
+            </div>
+          </div>
+          <div class="auth-benefit">
+            <span class="auth-benefit__n" aria-hidden="true">02</span>
+            <div>
+              <p class="auth-benefit__t">管理我的积分</p>
+              <p class="auth-benefit__d">查看积分余额与收支明细，注册赠 30 积分，积分不足可联系客服获取。</p>
+            </div>
+          </div>
+          <div class="auth-benefit">
+            <span class="auth-benefit__n" aria-hidden="true">03</span>
+            <div>
+              <p class="auth-benefit__t">查看已解锁房源</p>
+              <p class="auth-benefit__d">已解锁的房源集中列出，随时回看业主电话，直接拨打。</p>
+            </div>
+          </div>
+        </div>
+        <p class="notice" style="margin-top:22px">请合理使用业主联系方式，勿用于骚扰或转售。平台会对异常解锁行为进行限制。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__top">
+    <div>
+      <img class="footer__logo" src="assets/brand/logo-word.webp" alt="碧萝找厂" width="150" height="31" loading="lazy" decoding="async">
+      <p class="footer__desc">上海·嘉定厂房、仓库租赁信息平台。房源均由业主本人（一房东）提供并核实产权，用户注册后可消耗积分解锁业主联系方式，直接与业主沟通。</p>
+    </div>
+    <div>
+      <p class="footer__h">网站导航</p>
+      <div class="footer__list">
+        <a href="index.html">房源列表（17 套）</a>
+        <a href="about.html">平台说明</a>
+        <a href="account.html">我的账号与积分</a>
+        <a href="contact.html">联系客服</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__h">客服与规则</p>
+      <div class="footer__list">
+        <a href="tel:13800000000">客服电话：138 0000 0000</a>
+        <span style="color:var(--mute)">微信号：biluozhaochang</span>
+        <span style="color:var(--mute)">注册赠送 30 积分 · 解锁一套消耗 10 积分</span>
+        <span style="color:var(--mute)">服务时间：9:00–21:00</span>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <div>© 2026 碧萝找厂 · 上海·嘉定 · 沪ICP备XXXXXXXX号（占位）</div>
+    <div>演示版本：业主联系方式为占位内容，正式上线前替换为经核实的真实信息。</div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/account.js"></script>
+</body>
+</html>
